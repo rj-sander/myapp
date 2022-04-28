@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.post("/api/answers", (req, res) => {
   console.log(req.body);
-  fs.appendFile("test.csv", req.body + "\r\n", (err) => {
+  fs.appendFile("public/test.csv", req.body + "\r\n", (err) => {
     if (err) throw err;
     console.log("The results were appended to file!");
   });
